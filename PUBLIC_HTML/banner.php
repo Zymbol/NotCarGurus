@@ -1,4 +1,4 @@
-<div style="float: left;margin-left:-39px;" id="carouselExampleControls" class="carousel slide" data-ride="carousel"
+<div style="float: left;width:100%;" id="carouselExampleControls" class="carousel slide" data-ride="carousel"
   data-interval="10000">
   <div class="carousel-inner">
     <div class="carousel-item active" >
