@@ -8,10 +8,10 @@
       <img class="d-block w-100" src="./images/banner2.jpg" alt="Aerial View of Car">
     </div>
     <div style="float: left; width: 100%" class="carousel-item">
-      <img class="d-block w-100" src="./images/banner3.jpg" alt="Aerial View of Car">
+      <img class="d-block w-100" src="./images/banner3.jpg" alt="Time lapse">
     </div>
     <div style="float: left; width: 100%" class="carousel-item">
-      <img class="d-block w-100" src="./images/banner4.jpg" alt="Aerial View of Car">
+      <img class="d-block w-100" src="./images/banner4.jpg" alt="car carousel">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
