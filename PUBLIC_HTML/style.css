@@ -114,3 +114,6 @@ width: 70%;
 .dropdown:hover .dropbtn {
       background-color: white;
 }
+.cards {
+  width: 3em;
+}
