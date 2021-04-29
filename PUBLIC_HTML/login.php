@@ -9,7 +9,7 @@ $username = $password = "";
 
 require_once "connect.php";
 
-session_start();
+// session_start();
 
 //Carter Test Comment LOL
 
@@ -75,7 +75,7 @@ if (isset($_POST) && !empty($_POST)) {
 		// if (password_verify($password, $row[0]['password'])){
 			$_SESSION['logged_in'] = true;
 			header("Location: home.php");
-			echo "Welcome";
+			// echo "Welcome";
 		// }
     }
     $result->free();
