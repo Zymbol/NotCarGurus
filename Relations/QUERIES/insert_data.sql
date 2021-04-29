@@ -8,3 +8,4 @@ INSERT INTO Customer (Account_ID, F_name, L_name, Email, Password, Birthdate, Ad
 INSERT INTO Products(name, price) VALUES('Product 1', 1.99);
 INSERT INTO Products(name, price) VALUES('Product 2', 24.99);
 INSERT INTO Products(name, price) VALUES('Product 3', 19.99);
+INSERT INTO Customer(Account_ID, F_name, L_name, Email, Password, Birthdate, Address, Username) VALUES (21, 'test_first', 'test_last', 'testemail@test.com', 'test', '1992-12-12', '12 Test St', 'test_user');
