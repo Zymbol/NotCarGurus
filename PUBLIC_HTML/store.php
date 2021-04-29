@@ -1,5 +1,12 @@
-<div class="container-md"
 <?php 
+error_reporting(E_ALL);
+include "connect.php";
+include "nav.php";
+include "header.php";?>
+<div class="container-md">
+
+<?php 
+
 
 $result = $conn->query("SELECT * FROM Vehicle"); ?>
     <form method="POST">
