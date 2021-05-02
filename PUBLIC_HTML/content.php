@@ -1,12 +1,12 @@
 <body>
         <div class="container-lg">
             <?php 
-        if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
-	        echo '<h1 style="text-align: center;">Welcome, ' . $_SESSION['username'] . '!</h1>';
+        if (isset($_SESSION["user_id"])) {
+	        echo '<hr><h1 style="text-align: center;">Welcome, ' . $_SESSION["username"] . '!</h1><hr>';
 
         }
         else {
-	        echo '<h1 style="text-align: center;">Welcome, Guest!</h1>';
+	        echo '<hr><h1 style="text-align: center;">Welcome, Guest!</h1><hr>';
         }
 ?>
         <!-- <h1 style="text-align: center;">Welcome<br><br><br><br></h1> -->
