@@ -14,7 +14,8 @@
     <!-- Navbar Logo -->    
     <ul style="text-align:center;" class="navbar-nav mx-auto">
         <li class="nav-item active"><a href="./store.php">Our Vehicles</a></li>        
-        <li class="nav-item"><a href="contact.asp">Sell Your Car</a></li>
+        <li class="nav-item"><a href="./priciestVehicles.php">Elite Lineup </a></li>
+        <li class="nav-item"><a href="./AffordableVehicles.php">Affordable Lineup</a></li>
         <li class="nav-item"><a href="about.asp">About</a></li>
         <li class="nav-item">
             <div class="dropdown">

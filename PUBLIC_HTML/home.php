@@ -6,6 +6,6 @@ include "./header.php";
 include "./content.php";
 // include "./cart.php";
 // include "./sidebar.php";
-require_once "store.php";
+// require_once "store.php";
 include "./footer.php";
 ?>

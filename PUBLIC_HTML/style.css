@@ -18,6 +18,7 @@
     font-size: inherit;
     text-decoration: none;
   }
+  
   #navbar {
     background: white;
     color: rgb(13, 26, 38);
@@ -55,7 +56,10 @@ width: 70%;
     transition: transform 0.5s ease-out;
     -webkit-transition: transform 0.5s ease-out;
 }
-
+.thumbnail {
+    max-height: fit-content;
+  
+}
 .logo {
     box-sizing: content-box;
     width: 300px;    

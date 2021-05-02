@@ -5,25 +5,26 @@ include "connect.php";
 include "nav.php";
 include "header.php";?>
 <div class="container-md" style="display: inline-block;">
-<div class="container-md" style="text-align: center;"><hr><h3>View of All Vehicles </h3><hr></div>
-<?php $result = $conn->query("SELECT * FROM Vehicle"); ?>
+<div class="container-md" style="text-align: center;"><hr><h3>View of Vehicles above $50,000</h3><hr></div>
+<?php $result = $conn->query("SELECT * FROM ExpensiveVehicles"); ?>
 
 <form method="POST">
 <?php while ($row = $result->fetch_assoc()): ?>          
     <div class="carousel-inner py-4">
     <!-- Single item -->
-        <!-- <div class="carousel-item active"> -->
+        <div class="carousel-item active">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="card">
-                            <img style="thumbnail" src=<?= $row['Image'] ?>>
+                            <img class="thumbnail" src=<?= $row['Image'] ?>>
                             <div class="card-body">
                             <h5 class="card-title"><?=$row['Year']. " ". $row['Make'] . " " . $row['Model']?></h5>
                             <p class="card-text">
                                 $<?=number_format($row['Price'], 2) ?><br>
                                 Miles:</b> <?= number_format($row['Mileage']) ?><br>
                                 Condition:</b> <?= $row['Wear']?><br>
+                                Color:</b> <?= $row['Color'] ?><br>
                                 VIN:</b> <?= $row['VIN'] ?>
                             </p>
                                 <a href="#!" class="btn btn-primary">Add to Cart</a>
@@ -32,7 +33,7 @@ include "header.php";?>
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
     </div>
 <?php endwhile;
     $result->free();?>
@@ -47,6 +48,6 @@ include "header.php";?>
 	<hr>
         </form>
 </div>
-
+     
     <?php include './footer.php';
-    ?>
+    ?> 
