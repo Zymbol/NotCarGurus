@@ -15,7 +15,7 @@ include "./connect.php";
   <div id="demo" class="collapse">
         <br><p>Edgar Bacallo (CEO, Foreign Relations Expert, Expansion Manager, Total Badass)<br>
         Zachary Scholefield (CEO, CFO, Website Lead Developer, Cool Dad Energy)<br>
-        Preston Hidebrandt (CEO, New Hire Trainer, Product Analysis Lead, DaBaby Enthusiast)<br>
+        Preston Hildebrandt (CEO, New Hire Trainer, Product Analysis Lead, DaBaby Enthusiast)<br>
         Carter Womack (CEO, Head of Security, Guy That Hosts Funny Board Meetings, Chainmail Expert)<br>
         </p><br>
   </div>
