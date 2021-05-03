@@ -4,12 +4,12 @@
 <?php 
 include "nav.php";
 include "header.php";
-?> 
+?> <div class="container-md" style="text-align: center;">
 <form action="login.php" method="post">
-Username: <input type="text" name="username" required><br/>
-Password: <input type="password" name="password" required><br/>
+<input type="text" placeholder="Username" style="border-color: black;" name="username" required><br/>
+<input type="password" placeholder="Password" style="border-color: black;" name="password" required><br/><br>
 <!-- <input type="submit" name="Register" value="Register an account"> -->
-<input type="submit" name="Login" value="Login">
+<input type="submit" name="Login" value="Login"><br><br>
 </form>
 
 <?php
@@ -124,9 +124,10 @@ if (isset($_POST['Login'])) {
 if (isset($_SESSION["user_id"])) {
     echo "Welcome back, " . $_SESSION["username"] . "<br>";
 }
-
 ?>
+<img style="width:75%" src="./images/keys.jpg"><br><br>
 <?php include "footer.php"?>
+</div>
 </body>
 
 </html>
