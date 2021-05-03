@@ -57,7 +57,10 @@ width: 70%;
     -webkit-transition: transform 0.5s ease-out;
 }
 .thumbnail {
-    max-height: fit-content;
+  height: auto;
+  width: 100%;
+/* even more control with max-width */
+  max-width: 720px;
   
 }
 .logo {

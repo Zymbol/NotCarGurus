@@ -27,7 +27,7 @@ include "header.php";?>
                                 Color:</b> <?= $row['Color'] ?><br>
                                 VIN:</b> <?= $row['VIN'] ?>
                             </p>
-                                <a href="#!" class="btn btn-primary">Add to Cart</a>
+                                <a style="text-align:center;" href="#!" class="btn btn-primary">Add to Cart</a>
                             </div>
                         </div>
                     </div>
