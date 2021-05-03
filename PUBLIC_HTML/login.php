@@ -62,7 +62,7 @@ if (isset($_POST['Register'])) {
 
     // Establish the connection and try to execute the stored procedure
     $db = get_connection();
-    $statement = $db->prepare("ISERT INTO Customer(Username, Password) VALUES(?, ?)");
+    $statement = $db->prepare("INSERT INTO Customer(Username, Password) VALUES(?, ?)");
     $statement->bind_param('ss', $username, $hash);
     if ($statement->execute()) {
         mysqli_stmt_bind_result($statement, $res_userid, $res_error);
