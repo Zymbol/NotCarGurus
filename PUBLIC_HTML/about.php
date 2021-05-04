@@ -23,8 +23,8 @@ include "./connect.php";
   <img style="width:40vh" src="./images/warehouse.jpg"><br>
   <?php while ($row = $result->fetch_assoc()):?>
     <?= $row['W_Address'] ?><br>
-    <img class="thumbnail" src="<?= $row['W_Image'] ?>"><br><br>
+    <img class="thumbnail" src="<?= $row['W_Image'] ?>"><br>
     <?php endwhile;?>
 </div>
-    <footer><?php include "./footer.php"?></footer>
+
 
