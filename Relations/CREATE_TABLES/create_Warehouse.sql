@@ -4,10 +4,11 @@ CREATE TABLE Warehouse
 (
     
     W_ID TINYINT(4) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    W_Address VARCHAR(255) NOT NULL
+    W_Address VARCHAR(255) NOT NULL,
+    W_Image VARCHAR(255)
 );
         
-INSERT INTO Warehouse (W_ID, W_Address) VALUES (1, "6924 Spaight Circle");
-INSERT INTO Warehouse (W_ID, W_Address) VALUES (2, "84295 5th Point");
-INSERT INTO Warehouse (W_ID, W_Address) VALUES (3, "51600 Hooker Alley");
+INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (1, "6924 Spaight Circle", "./images/warehouse1.jpg");
+INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (2, "84295 5th Point", "./images/warehouse2.jpg");
+INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (3, "51600 Hooker Alley", "./images/warehouse3.jpg");
 

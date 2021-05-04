@@ -22,7 +22,9 @@ include "./connect.php";
   <hr><p>We have three warehouses in Bakersfield to ensure fast delivery directly to your home.</p>
   <img style="width:40vh" src="./images/warehouse.jpg"><br>
   <?php while ($row = $result->fetch_assoc()):?>
-    <?= $row['W_Address'] ?><br><br>
+    <?= $row['W_Address'] ?><br>
+    <img class="thumbnail" src="<?= $row['W_Image'] ?>"><br><br>
     <?php endwhile;?>
 </div>
+    <footer><?php include "./footer.php"?></footer>
 
