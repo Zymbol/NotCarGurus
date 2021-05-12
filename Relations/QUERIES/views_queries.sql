@@ -5,7 +5,6 @@ FROM Vehicle
 WHERE Price > 50000
 ORDER BY Price DESC;
 
-
 -- ReccentOrders (TWO TABLE VIEW) 
 CREATE VIEW RecentOrders AS 
 Select c.Account_ID, c.f_name, c.l_name, o.Order_ID, o.Order_Date, o.VIN 
