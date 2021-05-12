@@ -28,3 +28,25 @@ BEGIN
 END;
 //
 DELIMITER ;  
+
+--Stored Procedure for Registering users
+DROP PROCEDURE IF EXISTS RegisterUser;
+
+DELIMITER //
+
+CREATE PROCEDURE `RegisterUser` (uname varchar(30), passhash text)
+BEGIN
+    SELECT COUNT(*) INTO @usernameCount
+    FROM Customer
+    WHERE Username = uname;
+
+    IF @usernameCount > 0 THEN
+        SELECT NULL as userid, "Username already exists" AS 'Error';
+    ELSE
+        INSERT INTO Customer(Username, Password) VALUES (uname, passhash);
+        SELECT Account_ID AS userid, NULL as 'Error' FROM Customer WHERE Username = uname;
+    END IF;
+END;
+//
+DELIMITER ;
+

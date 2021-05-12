@@ -22,6 +22,7 @@
                 <button class="loginbtn">My Account</button>
                     <div class="dropdown-content">
                         <a href="login.php">Customer Login</a>
+                        <a href="signup.php">Register</a>                        
                         <a href="login.php">Employee Login</a>
                     </div>
             </div>

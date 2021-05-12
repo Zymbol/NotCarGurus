@@ -1,5 +1,5 @@
 <?php
-require_once "connect.php";
+// require_once "connect.php";
 include "./nav.php";
 include "./banner.php";
 include "./header.php";

@@ -7,8 +7,8 @@ CREATE TABLE Customer
     L_name VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL UNIQUE,
 	Password VARCHAR(255) NOT NULL,
-    Birthdate DATE NOT NULL,
-    Address VARCHAR(255) NOT NULL,
+    Birthdate DATE,
+    Address VARCHAR(255),
     Username VARCHAR(255) NOT NULL UNIQUE
 );
         

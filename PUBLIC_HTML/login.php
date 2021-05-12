@@ -46,41 +46,41 @@ if (isset($_SESSION["error"])) {
     die();
 }
 
-if (isset($_POST['Register'])) {
-    unset($_POST['Register']);
+// if (isset($_POST['Register'])) {
+//     unset($_POST['Register']);
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+//     $username = $_POST['username'];
+//     $password = $_POST['password'];
 
-    if (strlen($username) == 0 || strlen($password) == 0) {
-	    $_SESSION["error"] = "Username and/or password cannot be empty!";
-	    header("Location: login.php");
-    }
+//     if (strlen($username) == 0 || strlen($password) == 0) {
+// 	    $_SESSION["error"] = "Username and/or password cannot be empty!";
+// 	    header("Location: login.php");
+//     }
 
-    // Hash the password 
-    $hash = password_hash($password, PASSWORD_DEFAULT);
+//     // Hash the password 
+//     $hash = password_hash($password, PASSWORD_DEFAULT);
 
-    // Establish the connection and try to execute the stored procedure
-    $db = get_connection();
-    $statement = $db->prepare("INSERT INTO Customer(Username, Password) VALUES(?, ?)");
-    $statement->bind_param('ss', $username, $hash);
-    if ($statement->execute()) {
-        mysqli_stmt_bind_result($statement, $res_userid, $res_error);
-        if ($statement->fetch()) {
-            if (is_null($res_userid)) {
-                echo $res_error . "<br>";
-                die();
-            }
-            else {
-                echo 'Registration of ' . $username . " successful, userid is " . $res_userid . "<br>";
-            }
-        }
-    }
-    else {
-        echo "Error registering user: " . mysqli_error($db);
-        die();
-    }
-}
+//     // Establish the connection and try to execute the stored procedure
+//     $db = get_connection();
+//     $statement = $db->prepare("INSERT INTO Customer(Username, Password) VALUES(?, ?)");
+//     $statement->bind_param('ss', $username, $hash);
+//     if ($statement->execute()) {
+//         mysqli_stmt_bind_result($statement, $res_userid, $res_error);
+//         if ($statement->fetch()) {
+//             if (is_null($res_userid)) {
+//                 echo $res_error . "<br>";
+//                 die();
+//             }
+//             else {
+//                 echo 'Registration of ' . $username . " successful, userid is " . $res_userid . "<br>";
+//             }
+//         }
+//     }
+//     else {
+//         echo "Error registering user: " . mysqli_error($db);
+//         die();
+//     }
+// }
 
 // If true, user is trying to log in
 if (isset($_POST['Login'])) {
@@ -129,5 +129,4 @@ if (isset($_SESSION["user_id"])) {
 <?php include "footer.php"?>
 </div>
 </body>
-
 </html>

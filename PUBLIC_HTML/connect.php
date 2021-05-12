@@ -10,9 +10,7 @@ $database = 'zscholefield';
 static $conn;
 $conn = mysqli_connect($host, $user, $password, $database) or die(mysqli_connect_error());
 
-if ($conn->connect_errno) {
-    die("Connection failed: {$conn->connect_error}\n");
-    echo mysqli_connect_error();
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-
 ?>
