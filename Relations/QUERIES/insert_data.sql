@@ -50,6 +50,28 @@ END;
 //
 DELIMITER ;  
 
+
+-- procedure to log in employee
+
+DROP PROCEDURE IF EXISTS LoginEmployee;
+DELIMITER //
+CREATE PROCEDURE `LoginEmployee` (uname TINYINT(4))
+BEGIN
+    SELECT E_ID FROM Employee
+    WHERE uname = employeeID;
+    -- SELECT COUNT(*) INTO @usernameCount
+    -- FROM Customer
+    -- WHERE Email = uname;
+
+    -- IF @usernameCount > 0 THEN
+    --     SELECT Account_ID as userid, Password FROM Customer WHERE Email = uname;
+    -- ELSE
+    --     SELECT NULL as Account_ID, NULL as Password;
+    -- END IF;
+END;
+//
+DELIMITER ;  
+
 --Stored Procedure for Registering users
 DROP PROCEDURE IF EXISTS RegisterUser;
 

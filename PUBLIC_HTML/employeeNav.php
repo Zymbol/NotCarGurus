@@ -16,24 +16,17 @@ session_start();
   <div class="collapse navbar-collapse" id="main_nav">
     <!-- Navbar Logo -->    
     <ul style="text-align:center;" class="navbar-nav mx-auto">
-        <li class="nav-item active"><a href="./store.php">Our Vehicles</a></li>        
-        <li class="nav-item"><a href="./priciestVehicles.php">Elite Lineup </a></li>
-        <li class="nav-item"><a href="./AffordableVehicles.php">Affordable Lineup</a></li>
-        <li class="nav-item"><a href="about.php">About</a></li>    
+        <li class="nav-item"><a href="./RecentOrders.php">Recent Orders</a></li>
+        <li class="nav-item"><a href="./VehicleAtWarehouse.php">Warehouse Stock</a></li> 
+        <!-- <li class="nav-item"><a href="about.php">About</a></li>     -->
         <?php 
             if (isset($_SESSION["uname"])) {
             echo "<li class='nav-item'><a href='./logout.php'>Logout</a></li>";
             }
             else {
-                echo "<li class='nav-item'><a href='./login.php'>Login</a></li>";
-                echo "<li class='nav-item'><a href='./signup.php'>Sign Up</a></li>";
+                echo "<li class='nav-item'><a href='./employeeLogin.php'>Login</a></li>";
+                // echo "<li class='nav-item'><a href='./signup.php'>Sign Up</a></li>";
             }
             ?>
-        <li class="nav-item"><a href="employeeLogin.php">Employee Portal</a></li>    
-        
     </ul>  
 </nav>
-
-
-
-
