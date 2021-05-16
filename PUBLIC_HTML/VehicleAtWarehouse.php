@@ -6,7 +6,7 @@ include "connect.php";
 <div data-aos="zoom-out-down"
      data-aos-anchor-placement="top-bottom">
 <?php
-include "nav.php";?>
+include "employeeNav.php";?>
 </div>
 <?php
 include "header.php";?>

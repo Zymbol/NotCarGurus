@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 include "connect.php";?>
 <div data-aos="zoom-in-down">
 <?php
-include "nav.php";?>
+include "employeeNav.php";?>
 </div>
 <?php
 include "header.php";?>
