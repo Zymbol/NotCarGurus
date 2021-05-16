@@ -71,7 +71,7 @@ width: 70%;
 }
 .card {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 1px 2px 0 #000;
@@ -157,4 +157,8 @@ width: 70%;
 }
 .cards {
   width: 3em;
+}
+.btnPrimary {
+  background: rgb(0, 160, 224);
+  color:rgb(250, 250, 250)
 }

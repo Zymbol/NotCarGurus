@@ -1,4 +1,4 @@
-<div class="container-md">
+<div>
 <?php 
 error_reporting(E_ALL);
 include "connect.php";?>
@@ -32,7 +32,7 @@ while ($row = $result->fetch_assoc()):?>
         VIN:</b> <?= $row['VIN'] ?>
        
     </p>
-    <a href="<?= $row['LINK']?>" class="btn btn-primary">View Item</a>
+    <a href="<?= $row['LINK']?>" class="btn btnPrimary">View Item</a>
 </div>
 </section>
 <?php 

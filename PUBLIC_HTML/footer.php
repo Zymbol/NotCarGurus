@@ -1,6 +1,6 @@
 <footer>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        <p><?php echo PAGE_TITLE?> is totally <?php echo PAGE_TITLE?>!</p>
+    <div class="text-center p-3" style="background-color: rgb(0, 160, 224);">
+        <h3 style="color: #fff; text-size: .4rem"><?php echo PAGE_TITLE?> is totally <?php echo PAGE_TITLE?>!</h3>
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <!-- Popper.JS -->

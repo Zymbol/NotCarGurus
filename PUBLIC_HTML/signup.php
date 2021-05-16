@@ -1,50 +1,49 @@
 <?php 
 include "nav.php";
 include "header.php";
+include "./connect.php";
+// if(isset($_POST["submit"])) {
+//     $fname = $_POST["f_name"];
+//     $lname = $_POST["l_name"];
+//     $userName = $_POST["username"];
+//     $email = $_POST["email"];
+//     $address = $_POST["address"];
+//     $passwd = $_POST["password"];
+//     $confirmPasswd = $_POST["cpass"];
 
-if(isset($_POST["submit"])) {
-    $fname = $_POST["f_name"];
-    $lname = $_POST["l_name"];
-    $userName = $_POST["username"];
-    $email = $_POST["email"];
-    $address = $_POST["address"];
-    $passwd = $_POST["password"];
-    $confirmPasswd = $_POST["cpass"];
+    // require_once 'functions.php';
 
-    require_once 'connect.php';
-    require_once 'functions.php';
+//     if (emptyInputSignup($fname, $lname, $userName, $email, $passwd, $confirmPasswd) !== false) {
+//         header("location: signup.php?error=emptyinput");
+//         exit();
+//     }
+//     if (invalidUsername($userName) !== false) {
+//         header("location: signup.php?error=invalidusername");
+//         exit();
+//     }
+//     if (invalidEmail($email) !== false) {
+//         header("location: signup.php?invalidemail");
+//         exit();
+//     }
+//     if (invalidEmail($address) !== false) {
+//         header("location: signup.php?emptyusername");
+//         exit();
+//     }
+//     if (passwdMatch($passwd, $confirmPasswd) !== false) {
+//         header("location: signup.php?error=passwordsdonotmatch");
+//         exit();
+//     }
+//     if (usernameExists($conn, $userName, $email) !== false) {
+//         header("location: signup.php?error=usernametaken");
+//         exit();
+//     }
 
-    if (emptyInputSignup($fname, $lname, $userName, $email, $passwd, $confirmPasswd) !== false) {
-        header("location: signup.php?error=emptyinput");
-        exit();
-    }
-    if (invalidUsername($userName) !== false) {
-        header("location: signup.php?error=invalidusername");
-        exit();
-    }
-    if (invalidEmail($email) !== false) {
-        header("location: signup.php?invalidemail");
-        exit();
-    }
-    if (invalidEmail($address) !== false) {
-        header("location: signup.php?emptyusername");
-        exit();
-    }
-    if (passwdMatch($passwd, $confirmPasswd) !== false) {
-        header("location: signup.php?error=passwordsdonotmatch");
-        exit();
-    }
-    if (usernameExists($conn, $userName, $email) !== false) {
-        header("location: signup.php?error=usernametaken");
-        exit();
-    }
-
-    createUser($conn, $fname, $lname, $email, $passwd, $userName);
-}
-else {
-    header("location: signup.php");
-    exit();
-}
+//     createUser($conn, $fname, $lname, $email, $passwd, $userName);
+// // }
+// else {
+//     header("location: signup.php");
+//     exit();
+// }
 ?> <div class="container-md" style="text-align: center;">
 <div class="signup-form">
 <form action="register_a.php" method="post" enctype="multipart/form-data">
@@ -78,3 +77,4 @@ else {
 </form>
 </div>
 </div>
+<?php include "./footer.php"; ?>

@@ -1,4 +1,4 @@
-<div class="container-md">
+<div >
 <?php
 error_reporting(E_ALL);
 include "connect.php";?>
@@ -8,7 +8,7 @@ include "nav.php";?>
 </div>
 <?php
 include "header.php";?>
-<div class="container-md" style="display: inline-block;">
+<div>
 <div class="container-md" style="text-align: center;"><hr><h3>View of Recent Orders (2019-2020)</h3><hr></div>
 <?php $result = $conn->query("SELECT * FROM RecentOrders"); ?>
 

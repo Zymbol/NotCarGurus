@@ -1,4 +1,4 @@
-<div class="container-md">
+<div >
 <?php 
 error_reporting(E_ALL);
 include "connect.php";?>
@@ -14,14 +14,14 @@ include "header.php";?>
     <h3 data-aos="fade-down-right">Our Vehicles</h3>
 <hr data-aos="zoom-out-up" data-aos-duration="1500">
 </div>
-
+<form>
 <!-- Main -->
 <main class="container" style="overflow-y: hidden;" >
 <!-- Item -->
 <?php $result = $conn->query("SELECT * FROM Vehicle"); 
 while ($row = $result->fetch_assoc()):?>
 <section class="card" data-aos="zoom-out-up" data-aos-duration="1500" style="overflow-y: hidden;">
-    <img class="thumbnail" src="<?= $row['Image']?>" alt="">
+    <img style="order:2" class="thumbnail" src="<?= $row['Image']?>" alt="">
     <div>
     <h3><?=$row['Year']. " ". $row['Make'] . " " . $row['Model']?></h3>
     <p>
@@ -32,7 +32,7 @@ while ($row = $result->fetch_assoc()):?>
         VIN:</b> <?= $row['VIN'] ?>
        
     </p>
-    <a href="<?= $row['LINK']?>" class="btn btn-primary">View Item</a>
+    <a href="<?= $row['LINK']?>" class="btn btnPrimary">View Item</a>
 </div>
 </section>
 <?php 
@@ -40,5 +40,5 @@ endwhile; $result->free();
 ?>
 
 </main>
-
+</form>
 <?php include "./footer.php";?>

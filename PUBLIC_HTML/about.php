@@ -14,7 +14,7 @@ include "./connect.php";
 <div class="container mt-3" style="text-align: center;">
   <h2 style="text-align:center;">About Us</h2><hr>
   <h4>We are NotCarGurus and CarGurus is <i>not</i> us.</h4>  
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">The Team</button>
+  <button type="button" class="btn btn-primary" style="background:rgb(0, 160, 224);" data-toggle="collapse" data-target="#demo">The Team</button>
   <div id="demo" class="collapse">
         <br><p>Edgar Bacallo (CEO, Foreign Relations Expert, Expansion Manager, Total Badass)<br>
         Zachary Scholefield (CEO, CFO, Website Lead Developer, Cool Dad Energy)<br>

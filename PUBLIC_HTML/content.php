@@ -9,7 +9,9 @@ $username = $_SESSION["uname"];?>
 
         }
         else {
-	        echo '<hr><h1 style="text-align: center;">Welcome, Guest!</h1><hr>';
+	        echo '<hr><h1 style="text-align: center;">Welcome, Guest!</h1>';
+                echo '<p style="text-align: center;">Already a Member?<b> <a href="./login.php">Log In</a></b><br>
+                 or<br>Become a Member!<b> <a href="./signup.php">Register</a></b></p>';
         }
 ?>
         <!-- <h1 style="text-align: center;">Welcome<br><br><br><br></h1> -->

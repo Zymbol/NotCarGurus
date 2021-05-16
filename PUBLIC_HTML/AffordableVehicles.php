@@ -1,4 +1,4 @@
-<div class="container-md">
+<div>
 <?php 
 error_reporting(E_ALL);
 include "connect.php";
@@ -22,7 +22,7 @@ include "header.php";?>
     <?php $result = $conn->query("SELECT * FROM AffordableVehicles"); 
         while ($row = $result->fetch_assoc()):?>
         <section class="card" data-aos="zoom-out" data-aos-duration="1500" data-aos-easing="ease-in-sine" style="overflow-y: hidden;">
-            <img class="thumbnail" src="<?= $row['Image']?>" alt="">
+            <img style="order:2" class="thumbnail" src="<?= $row['Image']?>" alt="">
             <div>
                 <h3><?=$row['Year']. " ". $row['Make'] . " " . $row['Model']?></h3>
                 <p>
@@ -33,7 +33,7 @@ include "header.php";?>
                     VIN:</b> <?= $row['VIN'] ?>
        
                 </p>
-                <a href="<?= $row['LINK']?>" class="btn btn-primary">View Item</a>
+                <a href="<?= $row['LINK']?>" class="btn btnPrimary">View Item</a>
             </div>
         </section>
     <?php endwhile; $result->free();?>
