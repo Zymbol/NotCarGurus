@@ -1,6 +1,8 @@
+<div  data-aos="fade-down-right" data-aos-duration="2700">
+<?php include "./nav.php"; ?>
+</div>
+
 <?php
-// require_once "connect.php";
-include "./nav.php";
 include "./banner.php";
 include "./header.php";
 include "./content.php";

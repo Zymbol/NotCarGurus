@@ -1,3 +1,6 @@
+<?php include "./connect.php";
+session_start();
+?>
 <nav style="text-align: center;" class="navbar navbar-expand-lg navbar-light bg-light">
     <a  href="./home.php"><img class="logo"src="./images/logo.png">
     </a>
@@ -18,17 +21,25 @@
         <li class="nav-item"><a href="./AffordableVehicles.php">Affordable Lineup</a></li>
         <li class="nav-item"><a href="./RecentOrders.php">Recent Orders</a></li>
         <li class="nav-item"><a href="./VehicleAtWarehouse.php">Warehouse Stock</a></li> 
-	<li class="nav-item"><a href="about.php">About</a></li>
-	<li class="nav-item">
-            <div class="dropdown">
-                <button class="loginbtn">My Account</button>
-                    <div class="dropdown-content">
-                        <a href="login.php">Customer Login</a>
-                        <a href="signup.php">Register</a>                        
-                        <a href="login.php">Employee Login</a>
-                    </div>
-            </div>
-        </li>
+        <li class="nav-item"><a href="about.php">About</a></li>
+        <li class="nav-item">
+                <div class="dropdown">
+                    <button class="loginbtn">My Account</button>
+                        <div class="dropdown-content">
+                            <a href="login.php">Customer Login</a>
+                            <a href="signup.php">Register</a>                        
+                            <a href="login.php">Employee Login</a>
+                        </div>        
+                </div>
+            </li>    
+        <?php 
+            if (isset($_SESSION["uname"])) {
+            echo "<li class='nav-item'><a href='./logout.php'>Logout</a></li>";
+            }
+            else {
+                echo "<li class='nav-item'><a href='./login.php'>Login</a></li>";
+            }
+            ?>
     </ul>  
 </nav>
 

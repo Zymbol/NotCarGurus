@@ -1,5 +1,8 @@
+<div data-aos="fade-down"  data-aos-duration="2500">
 <?php 
-include "./nav.php";
+include "./nav.php";?>
+</div>
+<?php
 include "./header.php";
 include "./connect.php";
 ?>
@@ -19,12 +22,17 @@ include "./connect.php";
         Carter Womack (CEO, Head of Security, Guy That Hosts Funny Board Meetings, Chainmail Expert)<br>
         </p><br>
   </div>
-  <hr><p>We have three warehouses in Bakersfield to ensure fast delivery directly to your home.</p>
-  <img style="width:40vh" src="./images/warehouse.jpg"><br>
-  <?php while ($row = $result->fetch_assoc()):?>
-    <?= $row['W_Address'] ?><br>
-    <img class="thumbnail" src="<?= $row['W_Image'] ?>"><br>
-    <?php endwhile;?>
+  <hr ><p>We have three warehouses in Bakersfield to ensure fast delivery directly to your home.</p>
+  <img data-aos="zoom-out" data-aos-duration="2500" style="width:40vh" src="./images/warehouse.jpg"><br>
+  <div class="container" style="margin-top: 2rem; margin-bottom:2rem">
+    <div  data-aos="zoom-in" class="card">
+      <?php while ($row = $result->fetch_assoc()):?>
+      <?= $row['W_Address'] ?><br>
+      <img class="thumbnail" src="<?= $row['W_Image'] ?>"><br>
+      <?php endwhile;?>
+    </div>
+    
+  </div>
 </div>
-
+<?php include "./footer.php";?>
 

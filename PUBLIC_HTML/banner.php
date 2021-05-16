@@ -1,4 +1,4 @@
-<div style="float: left;width:100%;" id="carouselExampleControls" class="carousel slide" data-ride="carousel"
+<div data-aos="flip-left"  data-aos-duration="2500" style="float: left;width:100%;" id="carouselExampleControls" class="carousel slide" data-ride="carousel"
   data-interval="9000">
   <div class="carousel-inner">
     <div class="carousel-item active" >

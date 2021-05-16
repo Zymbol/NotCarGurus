@@ -1,53 +1,71 @@
 <div class="container-md">
 <?php
 error_reporting(E_ALL);
-include "connect.php";
-include "nav.php";
+include "connect.php";?>
+<div data-aos="zoom-in-down">
+<?php
+include "nav.php";?>
+</div>
+<?php
 include "header.php";?>
 <div class="container-md" style="display: inline-block;">
 <div class="container-md" style="text-align: center;"><hr><h3>View of Recent Orders (2019-2020)</h3><hr></div>
 <?php $result = $conn->query("SELECT * FROM RecentOrders"); ?>
 
 <form method="POST">
-<?php while ($row = $result->fetch_assoc()): ?>
-    <div class="carousel-inner py-4">
-    <!-- Single item -->
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                            <h5 class="card-title"><?=$row['Year']. " ". $row['Make'] . " " . $row['Model']?></h5>
-                            <p class="card-text">
-				Account ID:</b> <?= $row['Account_ID']?><br>
-				First Name:</b> <?= $row['f_name']?><br> 
-				Last Name:</b> <?= $row['l_name']?><br> 
-                                Order ID:</b> <?= $row['Order_ID']?><br>
-                                Order Date:</b> <?= $row['Order_Date'] ?><br>
-                                VIN:</b> <?= $row['VIN'] ?>
-                            </p>
-                            </div>
-                        </div>
-                    </div>
+<?php $i = 0;
+// Establish the output variable
+$dyn_table = '<table style="margin-left: auto;
+margin-right: auto;">';
+while ($row = $result->fetch_assoc()): 
+    $account_id = $row['Account_ID'];
+    $f_name = $row['f_name'];
+    $l_name = $row['l_name'];
+    $order_id = $row['Order_ID'];
+    $order_date = $row['Order_Date'];
+    $vehicle_id = $row['VIN'];
+    
+    if ($i % 2 == 0) { // if $i is divisible by our target number (in this case "2")
+        $dyn_table .= '
+        <tr>
+            <td>
+                <div class="container" style="padding: 1em">
+                    <div class="card-group">' . 
+                        '<p class="card-text">' . 
+                            'Account ID: ' . $account_id . '<br>' . 
+                            'First Name: ' . $f_name . '<br>' .
+                            'Last Name: ' . $l_name . '<br>' .
+                            'Order ID: ' . $order_id . '<br>' .
+                            'Order Date: ' . $order_date . '<br>' .
+                            'VIN: ' . $vehicle_id . '<br>' .        
+                        '</p>' .
+                    '</div>
                 </div>
-            </div>
+            </td>';
+    } else {
+        $dyn_table .= '<td>
+        <div class="container" style="padding: 2em">
+            <div class="card-group">' . 
+                '<p class="card-text">' . 
+                    'Account ID: ' . $account_id . '<br>' . 
+                    'First Name: ' . $f_name . '<br>' .
+                    'Last Name: ' . $l_name . '<br>' .
+                    'Order ID: ' . $order_id . '<br>' .
+                    'Order Date: ' . $order_date . '<br>' .
+                    'VIN: ' . $vehicle_id . '<br>' .        
+                '</p>' .
+            '</div>
         </div>
-    </div>
-<?php endwhile;
-    $result->free();?>
-        <!-- <h5><b><?=$row['Year']. " ". $row['Make'] . " " . $row['Model']?></b></h5> -->
-        <!-- <h5>$<?=number_format($row['Price'], 2) ?></h5> -->
-        <!-- <h5><img style="width: 19em;" src=<?= $row['Image'] ?>></h5> -->
-        <!-- <h5><b>Miles:</b> <?= number_format($row['Mileage']) ?></h5> -->
-        <!-- <h5><b>Condition:</b> <?= $row['Wear']?></h5> -->
-        <!-- <h5><b>VIN:</b> <?= $row['VIN'] ?></h5> -->
-
-        <h5>
-        <hr>
-        </form>
+    </td>';
+    }
+    $i++;
+endwhile;
+$dyn_table .= '</tr></table>';
+echo $dyn_table;
+?>
+<hr>
+</form>
 </div>
      
-    <?php include './footer.php';
-    ?> 
+<?php include './footer.php';?> 
 

@@ -29,6 +29,27 @@ END;
 //
 DELIMITER ;  
 
+-- new procedure
+
+DROP PROCEDURE IF EXISTS LoginUser;
+DELIMITER //
+CREATE PROCEDURE `LoginUser` (uname varchar(255))
+BEGIN
+    SELECT Username FROM Customer
+    WHERE uname = username;
+    -- SELECT COUNT(*) INTO @usernameCount
+    -- FROM Customer
+    -- WHERE Email = uname;
+
+    -- IF @usernameCount > 0 THEN
+    --     SELECT Account_ID as userid, Password FROM Customer WHERE Email = uname;
+    -- ELSE
+    --     SELECT NULL as Account_ID, NULL as Password;
+    -- END IF;
+END;
+//
+DELIMITER ;  
+
 --Stored Procedure for Registering users
 DROP PROCEDURE IF EXISTS RegisterUser;
 
