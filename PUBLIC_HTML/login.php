@@ -7,6 +7,35 @@ include "nav.php";?>
 include "header.php";
 session_start();
 include "./connect.php";
+function data_input($data) {
+    $data = htmlspecialchars($data);
+    return $data;
+}
+if (isset($_POST) && !empty($_POST)) {
+    $valid = true;
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
+
+    
+
+    if (empty($_POST["username"])) {
+        $username = "Username is required";
+        $valid = false;
+        $errors = true;
+    } else {
+        $username = data_input($_POST["username"]);
+    
+    }
+    if (empty($_POST["password"])) {
+        $password = "Please enter a password";
+        $valid = false;
+        $error = true;
+    } else {
+        $password = data_input($_POST["password"]);
+    
+    }
+}
+
 ?> <div class="container-md" style="text-align: center;">
 <form action="login.php" method="post"> 
 <div  data-aos="zoom-in-up">

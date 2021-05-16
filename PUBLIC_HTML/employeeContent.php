@@ -1,24 +1,28 @@
 <?php session_start();
-$username = $_SESSION["uname"];?>
+$username = $_SESSION["Euname"];?>
 
 <body>
         <div style="margin:auto;" class="container-md">
             <?php 
-        if (isset($_SESSION["uname"])) {
+        if (isset($_SESSION["Euname"])) {
 	        echo '<hr><h1 style="text-align: center;">Welcome to your Employee Portal, ' . $username . '!</h1><hr>';
 
         }
         else {
-	        echo '<hr><h1 style="text-align: center;"><i>Employees Only</i></h1>';
-                header('Location: ./home.php');
+            echo '
+            <script>
+            alert("Employees Only!!!");
+            window.location.replace("https://delphi.cs.csub.edu/~zscholefield/NotCarGurus/employeeLogin.php");
+            </script>';
         }
 ?>
         <!-- <h1 style="text-align: center;">Welcome<br><br><br><br></h1> -->
         <?php $result = $conn->query("SELECT * FROM Employee WHERE Username='$username'"); 
-        while ($row = $result->fetch_assoc()):?>
+        while ($row = $result->fetch_assoc()):
+            $firstName =  $row['F_name'];?>
         <section class="card" data-aos="zoom-out" data-aos-duration="1500" data-aos-easing="ease-in-sine" style="overflow-y: hidden;">
             <div>
-                <h3><?= $row['F_name'] . " " . $row['L_name']?></h3>
+                <h3><?= $firstName . " " . $row['L_name']?></h3>
                 <p>
                     Employee ID Number:</b> <?= $row['E_ID']?><br>
                     Birthdate:</b> <?= $row['Birthdate']?><br>

@@ -25,11 +25,11 @@ include "./connect.php";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     // echo $row['personID'];
-    $_SESSION["uname"] = $row['Username'];
-    if( isset($_SESSION["uname"]) ){
+    $_SESSION["Euname"] = $row['Username'];
+    if( isset($_SESSION["Euname"]) ){
         header("Location: ./employeeHome.php");
     }
-    echo $_SESSION['uname'];
+    echo $_SESSION['Euname'];
 ?>
 </form>
 

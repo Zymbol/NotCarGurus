@@ -52,13 +52,13 @@ DELIMITER ;
 
 
 -- procedure to log in employee
-
+ 
 DROP PROCEDURE IF EXISTS LoginEmployee;
 DELIMITER //
-CREATE PROCEDURE `LoginEmployee` (uname TINYINT(4))
+CREATE PROCEDURE `LoginEmployee` (Euname varchar(255))
 BEGIN
-    SELECT E_ID FROM Employee
-    WHERE uname = employeeID;
+    SELECT Username FROM Employee
+    WHERE Euname = username;
     -- SELECT COUNT(*) INTO @usernameCount
     -- FROM Customer
     -- WHERE Email = uname;
@@ -93,3 +93,15 @@ END;
 //
 DELIMITER ;
 
+CREATE PROCEDURE customerPurchases (C.Username VARCHAR(25));
+
+DELIMITER // 
+BEGIN
+    SELECT C.*,V.*, O.Order_ID 
+    FROM Customer C      
+    JOIN Orders O on C.Account_ID = O.Account_ID     
+    JOIN Vehicle V on V.VIN = O.VIN     
+    WHERE C.Username = Username ;
+END;
+//
+DELIMITER ;

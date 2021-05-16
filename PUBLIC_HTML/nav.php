@@ -1,5 +1,6 @@
 <?php include "./connect.php";
 session_start();
+$username = $_SESSION["uname"];
 ?>
 <nav style="text-align: center;" class="navbar navbar-expand-lg navbar-light bg-light">
     <a style="padding-left: 2rem; padding-right: 2rem"  href="./home.php"><img class="logo"src="./images/logo.png">
@@ -21,15 +22,19 @@ session_start();
         <li class="nav-item"><a href="./AffordableVehicles.php">Affordable Lineup</a></li>
         <li class="nav-item"><a href="about.php">About</a></li>    
         <?php 
-            if (isset($_SESSION["uname"])) {
+            if (isset($username)) {
             echo "<li class='nav-item'><a href='./logout.php'>Logout</a></li>";
+            echo "<li class='nav-item'><a href='./customerHome.php'>Hello, $username!</a></li>";
+            
+
             }
             else {
                 echo "<li class='nav-item'><a href='./login.php'>Login</a></li>";
                 echo "<li class='nav-item'><a href='./signup.php'>Sign Up</a></li>";
+                echo "<li class='nav-item'><a href='employeeLogin.php'>Employee Portal</a></li> ";
             }
             ?>
-        <li class="nav-item"><a href="employeeLogin.php">Employee Portal</a></li>    
+           
         
     </ul>  
 </nav>
