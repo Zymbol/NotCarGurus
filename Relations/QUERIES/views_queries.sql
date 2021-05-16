@@ -25,10 +25,3 @@ SELECT Make, Model, Color, Wear, Year, Price, VIN, Image, Mileage
 FROM Vehicle 
 WHERE Price <= 50000
 ORDER BY Price ASC;
-
--- Customer Account View
-SELECT C.*,V.*, O.Order_ID 
-FROM Customer C      
-JOIN Orders O on C.Account_ID = O.Account_ID     
-JOIN Vehicle V on V.VIN = O.VIN     
-WHERE C.Username = '';
