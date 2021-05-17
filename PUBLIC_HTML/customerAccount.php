@@ -6,7 +6,7 @@ $username = $_SESSION["uname"];?>
         <div style="margin:auto;" class="container-md">
             <?php 
         if (isset($_SESSION["uname"])) {
-            echo '<hr><h1 style="text-align: center;"> Account</h1><hr>';
+            echo '<hr><h1 style="text-align: center;"><b style="color:rgb(0, 160, 224);">Your</b> Account</h1><hr>';
             
         }
         else {
@@ -18,7 +18,6 @@ $username = $_SESSION["uname"];?>
         }
         ?>
         <img style="width:100%; margin:auto;" src="./images/banner2.jpg">
-        <!-- <h1 style="text-align: center;">Welcome<br><br><br><br></h1> -->
         <?php $result = $conn->query("CALL customerPurchases('$username')"); 
         while ($row = $result->fetch_assoc()):
             $firstName =  $row['F_name'];?>

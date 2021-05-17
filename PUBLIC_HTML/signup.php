@@ -44,11 +44,12 @@ include "./connect.php";
 //     header("location: signup.php");
 //     exit();
 // }
-?> <div class="container-md" style="text-align: center;">
+?>
+<hr><h3 style="text-align: center;"><b>Sign</b> Up</h3><hr> 
+<div class="container-md" style="text-align: center;">
 <div class="signup-form">
 <form action="register_a.php" method="post" enctype="multipart/form-data">
-    <h2>Sign Up</h2>
-    <p class="hint-text">Create your account</p>
+    <p class="hint-text">Create Your Account</p>
     <div class="form-group">
         <div class="row">
             <div class="col"><input type="text" class="form-control" name="f_name" placeholder="First Name" required="required"></div>
@@ -71,9 +72,9 @@ include "./connect.php";
         <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a></label>
     </div>
     <div class="form-group">
-        <button type="submit" name="register" class="btn btn-primary btn-lg btn-block">Register Now</button>
+        <button type="submit" name="register" class="btn btnPrimary">Register Now</button>
     </div>
-    <div class="text-center">Already have an account? <a href="login.php">Sign in</a></div>
+    <div class="text-center">Already have an account? <a href="login.php"><b>Sign in</b></a></div>
 </form>
 </div>
 </div>

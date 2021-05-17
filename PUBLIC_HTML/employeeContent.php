@@ -5,8 +5,7 @@ $username = $_SESSION["Euname"];?>
         <div style="margin:auto;" class="container-md">
             <?php 
         if (isset($_SESSION["Euname"])) {
-	        echo '<hr><h1 style="text-align: center;">Welcome to your Employee Portal, ' . $username . '!</h1><hr>';
-
+	        echo '<hr><h1 style="text-align: center;"><b>' . $username .'\'s</b> Employee Portal</h1><hr>';
         }
         else {
             echo '

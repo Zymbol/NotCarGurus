@@ -23,7 +23,7 @@ $username = $_SESSION["Euname"];
         <?php 
             if (isset($username)) {
             echo "<li class='nav-item'><a href='./logout.php'>Logout</a></li>";
-            echo "<li class='nav-item'>Hello, $username!</li>";
+            echo "<li class='nav-item'><a href='./employeeHome.php'>$username's Account</a></li>";
 
             }
             else {

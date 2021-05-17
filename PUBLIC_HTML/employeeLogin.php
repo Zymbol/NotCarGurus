@@ -2,7 +2,7 @@
 <?php 
 include "nav.php";?> 
 </div>
-
+<hr><h3 style="text-align: center;"><b>Employee</b> Login</h3><hr>
 <?php
 include "header.php";
 session_start();

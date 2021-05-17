@@ -12,12 +12,12 @@ include "./connect.php";
 <?php $result = $conn->query("SELECT * FROM Warehouse"); ?>
 
 <div class="container mt-3" style="text-align: center;">
-  <h2 style="text-align:center;">About Us</h2><hr>
+  <h2 style="text-align:center;"><b>About</b> Us</h2><hr>
   <h4>We are NotCarGurus and CarGurus is <i>not</i> us.</h4>  
   <button type="button" class="btn btn-primary" style="background:rgb(0, 160, 224);" data-toggle="collapse" data-target="#demo">The Team</button>
   <div id="demo" class="collapse">
         <br><p>Edgar Bacallo (CEO, Foreign Relations Expert, Expansion Manager, Total Badass)<br>
-        Zachary Scholefield (CEO, CFO, Website Lead Developer, Cool Dad Energy)<br>
+        Zachary Scholefield (CEO, CFO, Lead Website Developer, Cool Dad Energy)<br>
         Preston Hildebrandt (CEO, New Hire Trainer, Product Analysis Lead, DaBaby Enthusiast)<br>
         Carter Womack (CEO, Head of Security, Guy That Hosts Funny Board Meetings, Chainmail Expert)<br>
         </p><br>

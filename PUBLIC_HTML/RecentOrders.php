@@ -9,7 +9,7 @@ include "employeeNav.php";?>
 <?php
 include "header.php";?>
 <div>
-<div class="container-md" style="text-align: center;"><hr><h3>View of Recent Orders (2019-2020)</h3><hr></div>
+<div class="container-md" style="text-align: center;"><hr><h3><b>View of Recent Orders</b> (2019-2020)</h3><hr></div>
 <?php $result = $conn->query("SELECT * FROM RecentOrders"); ?>
 
 <form method="POST">

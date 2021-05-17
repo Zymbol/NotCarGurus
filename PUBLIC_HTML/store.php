@@ -11,7 +11,7 @@ include "nav.php";?>
 include "header.php";?>
 <div class="container-md" style="text-align: center;">
 <hr data-aos="zoom-out-up" data-aos-duration="1500">
-    <h3 data-aos="fade-down-right">Our Vehicles</h3>
+    <h3 data-aos="fade-down-right"><b>Our</b> Vehicles</h3>
 <hr data-aos="zoom-out-up" data-aos-duration="1500">
 </div>
 <form>
