@@ -1,5 +1,6 @@
 <div>
 <?php 
+session_start();
 error_reporting(E_ALL);
 include "connect.php";
 ?>
@@ -15,7 +16,7 @@ include "header.php";?>
         <h3 data-aos="fade-down-right" ><b>View of Vehicles</b> Below $50,000</h3>
     <hr data-aos="zoom-out-down" data-aos-duration="1500">
 </div>
-<form method="$_POST">
+<form method="POST">
     <!-- Main -->
     <main class="container" style="overflow-y: hidden;" >
     <!-- Item -->
@@ -33,7 +34,7 @@ include "header.php";?>
                     VIN:</b> <?= $row['VIN'] ?>
        
                 </p>
-                <a href="<?= $row['LINK']?>" class="btn btnPrimary">View Item</a>
+                <button class="btn btnPrimary" name="VIN" value="<?= $row['VIN'] ?>">Add to cart</button>
             </div>
         </section>
     <?php endwhile; $result->free();?>

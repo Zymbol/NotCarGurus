@@ -1,6 +1,7 @@
 <div>
 <?php 
 error_reporting(E_ALL);
+session_start();
 include "connect.php";?>
 <div data-aos="zoom-out-down"
      data-aos-anchor-placement="top-bottom">
@@ -14,7 +15,7 @@ include "header.php";?>
     <h3 data-aos="fade-down-left" data-aos-duration="2500"><b>View of Vehicles</b> Above $50,000</h3>
 <hr data-aos="zoom-out-up" data-aos-duration="1500">
 </div>
-
+<form method="POST">
 <!-- Main -->
 <main class="container" style="overflow-y: hidden;" >
 <!-- Item -->
@@ -40,5 +41,6 @@ endwhile; $result->free();
 ?>
 
 </main>
+</form>
 
 <?php include "./footer.php";?>
