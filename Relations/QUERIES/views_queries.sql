@@ -1,6 +1,6 @@
 -- ExpensiveVehicles (ONE TABLE VIEW)
 CREATE VIEW ExpensiveVehicles AS 
-SELECT Make, Model, Color, Wear, Year, Price, VIN, Image, Mileage 
+SELECT Make, Model, Color, Wear, Year, Price, VIN, Image, Mileage, LINK 
 FROM Vehicle 
 WHERE Price > 50000
 ORDER BY Price DESC;
@@ -21,7 +21,7 @@ JOIN Warehouse w ON h.W_ID=w.W_ID;
 
 -- AffordableVehicles (FOUR TABLE VIEW)
 CREATE VIEW AffordableVehicles AS 
-SELECT Make, Model, Color, Wear, Year, Price, VIN, Image, Mileage 
+SELECT Make, Model, Color, Wear, Year, Price, VIN, Image, Mileage, LINK 
 FROM Vehicle 
 WHERE Price <= 50000
 ORDER BY Price ASC;
