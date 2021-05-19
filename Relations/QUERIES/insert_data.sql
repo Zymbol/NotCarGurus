@@ -51,8 +51,7 @@ END;
 DELIMITER ;  
 
 
--- procedure to log in employee
- 
+-- procedure to log in employee 
 DROP PROCEDURE IF EXISTS LoginEmployee;
 DELIMITER //
 CREATE PROCEDURE `LoginEmployee` (Euname varchar(255))

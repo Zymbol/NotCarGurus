@@ -8,7 +8,7 @@ CREATE TABLE Warehouse
     W_Image VARCHAR(255)
 );
         
-INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (1, "6924 Spaight Circle", "./images/warehouse1.jpg");
-INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (2, "84295 5th Point", "./images/warehouse2.jpg");
-INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (3, "51600 Hooker Alley", "./images/warehouse3.jpg");
+INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (1, "6924 Stockdale Hwy", "./images/warehouse1.jpg");
+INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (2, "84295 Gosford Rd", "./images/warehouse2.jpg");
+INSERT INTO Warehouse (W_ID, W_Address, W_Image) VALUES (3, "51600 Martin Luther King Blvd", "./images/warehouse3.jpg");
 
