@@ -34,7 +34,7 @@ include "header.php";?>
                     VIN:</b> <?= $row['VIN'] ?>
        
                 </p>
-                <button class="btn btnPrimary" name="VIN" value="<?= $row['VIN'] ?>">Add to cart</button>
+                <a href="<?= $row['LINK']?>" class="btn btnPrimary">View Item</a>
             </div>
         </section>
     <?php endwhile; $result->free();?>
