@@ -104,3 +104,19 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS masterView;
+
+DELIMITER //
+CREATE PROCEDURE masterView(Euname VARCHAR(30))
+BEGIN    
+    IF Euname = "ZS1" 
+    OR Euname = "EB1" 
+    OR Euname = "PH1" 
+    OR Euname = "CW1" THEN 
+        SELECT * FROM Employee;  
+    END IF;
+END;
+//
+DELIMITER ;

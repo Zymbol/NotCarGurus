@@ -17,6 +17,12 @@ $username = $_SESSION["Euname"];
   <div class="collapse navbar-collapse" id="main_nav">
     <!-- Navbar Logo -->    
     <ul style="text-align:center;" class="navbar-nav mx-auto">
+        <?php 
+        if ($username == "ZS1" ||$username == "EB1" || $username == "PH1" || $username == "CW1") {
+            echo '<li class="nav-item"><a href="./masterEmployeeView.php">NotCarGurus Employees</a></li>';
+        }       
+
+        ?>
         <li class="nav-item"><a href="./RecentOrders.php">Recent Orders</a></li>
         <li class="nav-item"><a href="./VehicleAtWarehouse.php">Warehouse Stock</a></li> 
         <!-- <li class="nav-item"><a href="about.php">About</a></li>     -->

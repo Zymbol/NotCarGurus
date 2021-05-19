@@ -34,8 +34,7 @@ $username = $_SESSION["Euname"];?>
             </div>
         </section>
     <?php endwhile; $result->free();?>
-
-        </div>
+    </div>
         
             <img style="width:100%; margin:auto;" src="./images/office.jpg">
         

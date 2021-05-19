@@ -32,3 +32,7 @@ INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Use
 INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Username) VALUES (18, "Analiese", "Rasmus", "1986-11-15", "305-01-9565", 3, "2021-02-14", "AR1");
 INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Username) VALUES (19, "Blisse", "Brotherick", "1991-03-31", "520-99-3478", 2, "2021-02-24", "BB2");
 INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Username) VALUES (20, "Allayne", "Hattoe", "1988-05-22", "897-08-9809", 1, "2021-04-02", "AH1");
+INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Username) VALUES (21, "Zak", "Scholefield", "1989-04-20", "666-83-1989", 1, "2021-01-22", "ZS1");
+INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Username) VALUES (22, "Preston", "Hildebrandt", "1999-04-20", "646-83-9823", 2, "2021-01-22", "PH1");
+INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Username) VALUES (23, "Edgar", "Bacallo", "1995-04-20", "726-03-1969", 1, "2021-01-22", "EB1");
+INSERT INTO Employee (E_ID, F_name, L_name, Birthdate, SSN, W_ID, Hire_Date, Username) VALUES (24, "Carter", "Womack", "2000-04-20", "919-81-4889", 3, "2021-01-22", "CW1");
