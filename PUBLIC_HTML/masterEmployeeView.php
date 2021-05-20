@@ -51,7 +51,7 @@ include "header.php";?>
                         <div class="card-group">' . 
                             '<p class="card-text">' . 
                                 'Employee ID: ' . $emp_id . '<br>' . 
-                                'First Name: ' . $F_name . '<br>' .
+                                'First Name: ' . $f_name . '<br>' .
                                 'Last Name: ' . $l_name . '<br>' .
                                 'Birthdate: ' . $bdate . '<br>' .
                                 'SSN: ' . $socSecNum . '<br>' .
