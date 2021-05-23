@@ -28,7 +28,6 @@ $username = $_SESSION["Euname"];?>
                     Social Security Number:</b> <?= $row['SSN']?><br>
                     Your Warehouse:</b> <?= $row['W_ID'] ?><br>
                     Hire Date:</b> <?= $row['Hire_Date'] ?><br>
-                    Warehouse ID:</b> <?= $row['W_ID'] ?><br>
                     Username:</b> <?= $row['Username'] ?>       
                 </p>
             </div>
